@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>رحلة الفصل إلى السماء</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="view"><div id="zoom"><div id="scene" aria-hidden="true"><div id="skybg"></div><div id="glow"></div><div id="sun"></div><div id="turf"></div><img id="land" data-asset="land" alt=""><div id="mist"></div><div id="deck"></div></div><div id="world" class="cam">
+  <div id="shadow"></div>
+  <div id="wisps"></div>
+</div>
+  <div id="clouds"></div>
+  <div id="balloon" class="grounded"><div class="bob"><img data-asset="balloon" alt="منطاد الفصل وفيه ثلاثة أطفال"><div class="label empty" id="label"></div></div></div>
+</div></div>
+
+<header class="hud" id="hud" hidden>
+  <div class="lv"><b id="lvName"></b><span id="lvPlace"></span></div>
+  <div class="prog"><div class="of" id="of"></div><div class="barwrap" aria-hidden="true"><div class="bar" id="bar"></div><img class="mini" id="mini" data-asset="balloon" alt=""><svg class="sun" viewBox="0 0 40 40"><g stroke="#F6A623" stroke-width="3" stroke-linecap="round"><path d="M20 2v6M20 32v6M2 20h6M32 20h6M7 7l4 4M29 29l4 4M7 33l4-4M29 11l4-4"/></g><circle cx="20" cy="20" r="9" fill="#FFD23F" stroke="#F6A623" stroke-width="2"/></svg></div></div>
+  <button class="icon" id="backBtn" aria-label="الرجوع إلى الآية السابقة" title="رجوع للآية السابقة" style="color:var(--text)"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button class="icon" id="homeBtn" aria-label="الصفحة الرئيسية" title="الصفحة الرئيسية"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></button>
+  <button class="icon" id="soundBtn" aria-label="الصوت"></button>
+  <button class="icon" id="setBtn" aria-label="إعدادات المعلمة"><svg viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm8.6 4.9-1.9 1.1.1 1.6-1.4 2.4-1.7-.2-1.3 1-.6 2.1h-2.8l-.6-2.1-1.3-1-1.7.2L4.1 16l.1-1.6-1.9-1.1v-2.8l1.9-1.1-.1-1.6L5.5 5.4l1.7.2 1.3-1L9.1 2.5h2.8l.6 2.1 1.3 1 1.7-.2 1.4 2.4-.1 1.6 1.9 1.1z"/></svg></button>
+</header>
+
+<footer class="controls" id="controls" hidden>
+  <button class="btn gold rd" id="launch">ابدأ</button>
+  <div class="ins">ردّد الآية ثلاث مرات</div>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="cnt" id="cnt" aria-live="polite"></div>
+  <button class="btn gold" id="rep">تم الترديد</button>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="sparks" aria-hidden="true"></div>
+
+<section class="card" id="start" aria-labelledby="t1">
+  <h1 id="t1">رحلة الفصل إلى السماء</h1>
+  <div class="sub" id="subT">هيا نرتقي بآيات سورة الملك</div>
+  <p class="ready">هل أنتم مستعدون للتحليق؟</p>
+  <p class="intro" id="introT"></p>
+  <label for="cls">اسم الفصل</label>
+  <input id="cls" maxlength="20" autocomplete="off" placeholder="مثال: ٢ أ">
+  <div class="row"><button class="btn gold" id="go" disabled>ابدأ الرحلة</button><button class="btn soft" id="resume" hidden></button></div>
+  <div class="surrow"><span id="surNow"></span><button class="btn soft small" id="surahBtn">تغيير السورة</button></div>
+</section>
+
+<section class="card" id="end" hidden aria-labelledby="t2">
+  <button class="x" id="endX" aria-label="إغلاق"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button>
+  <h2 id="t2">أحسنتم يا أبطال!</h2>
+  <p id="endT"></p>
+  <div class="sum" id="sum"></div>
+  <div class="row"><button class="btn gold" id="again">إعادة الرحلة</button></div>
+</section>
+<div id="fall" aria-hidden="true"></div>
+
+<div class="modal" id="modal" hidden><div class="mcard" role="dialog" aria-modal="true" aria-labelledby="mt">
+  <h3 id="mt">إعدادات المعلمة</h3><div id="mbody"></div><button class="btn soft mclose" id="mclose">إغلاق</button>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
